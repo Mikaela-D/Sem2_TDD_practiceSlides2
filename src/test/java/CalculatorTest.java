@@ -12,5 +12,8 @@ public class CalculatorTest {
             test.nbErrors++;
             e.printStackTrace();
         }
+        if (test.nbErrors > 0) {
+            throw new IllegalStateException("There were " + test.nbErrors + " error(s)");
+        }
     }
 }
